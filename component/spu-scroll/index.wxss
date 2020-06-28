@@ -1,59 +1,55 @@
+/* components/spu-scroll/index.wxss */
 .container {
+    box-sizing: border-box;
+    width: 100%;
     padding: 42rpx 0 34rpx 28rpx;
-    background-color: #fff;
+    background-color: #ffffff;
 }
 
 .title {
-    width: 692rpx;
+    width: 694rpx;
     height: 90rpx;
 }
 
+.price-unit {
+    font-size: 24rpx !important;
+    color: #157658 !important;
+}
+
+.price-value {
+    font-size: 26rpx !important;
+    color: #157658 !important;
+}
+
 .scroll-view {
+    margin-top: 28rpx;
     display: flex;
     flex-direction: row;
 }
 
 .inner {
     display: flex;
-
+    flex-direction: row;
 }
 
-.scroll-container {
-    margin-top: 28rpx;
+.spu-container {
+    margin-right: 60rpx;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-right: 60rpx;
 }
 
-.scroll-container view image {
-    height: 160rpx;
-    width: 160rpx;
-}
-
-.scroll-container text {
+.spu-text {
     font-size: 20rpx;
     color: #666666;
     margin-top: 20rpx;
-
-    /* overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    需要添加宽度才会显示省略号
-    */
+    /*width: 150rpx;*/
+    /*overflow: hidden;*/
+    /*text-overflow:ellipsis;*/
+    /*white-space: nowrap;*/
 }
 
-.price-value {
-    font-size: 24rpx !important;
-}
-
-.price-unit {
-    font-size: 26rpx;
-}
-
-
-
-.aa {
-    width: 100%;
-    background-color: rgb(22, 207, 53);
+.spu-img {
+    width: 160rpx;
+    height: 160rpx;
 }

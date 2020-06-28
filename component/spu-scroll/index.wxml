@@ -1,15 +1,16 @@
 <wxs src="../../miniprogram_npm/lin-ui/filter/string.wxs" module="s"></wxs>
+<wxs src="../../wxs/price.wxs" module="p"></wxs>
 <view class="container l-class">
-    <image class="title" mode="widthFix" src="{{theme.title_img}}" />
+    <image class="title" src="{{theme.title_img}}"></image>
     <scroll-view scroll-x class="scroll-view">
         <view class="inner">
             <block wx:for="{{spuList}}" wx:key="index">
-                <view class="scroll-container">
-                    <image class="aa" mode="widthFix" src="{{item.img}}" />
-                    <text>
-                        {{item.title.length>8?s.substring(item.title,0,7)+'...':item.title}}
+                <view data-spu-id="{{item.id}}" class="spu-container">
+                    <image class="spu-img" mode="widthFix" src="{{item.img}}"></image>
+                    <text class="spu-text">
+                        {{item.title.length>=8?s.substring(item.title,0,7)+'...':item.title}}
                     </text>
-                    <l-price autofix color="#157658" l-unit-class="price-unit" l-value-class="price-value" value="{{item.price}}"></l-price>
+                    <l-price autofix l-value-class="price-value" l-unit-class="price-unit" value="{{p.mainPrice(item.price,item.discount_price).price}}"></l-price>
                 </view>
             </block>
         </view>
