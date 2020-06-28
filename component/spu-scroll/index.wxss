@@ -1,0 +1,59 @@
+.container {
+    padding: 42rpx 0 34rpx 28rpx;
+    background-color: #fff;
+}
+
+.title {
+    width: 692rpx;
+    height: 90rpx;
+}
+
+.scroll-view {
+    display: flex;
+    flex-direction: row;
+}
+
+.inner {
+    display: flex;
+
+}
+
+.scroll-container {
+    margin-top: 28rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 60rpx;
+}
+
+.scroll-container view image {
+    height: 160rpx;
+    width: 160rpx;
+}
+
+.scroll-container text {
+    font-size: 20rpx;
+    color: #666666;
+    margin-top: 20rpx;
+
+    /* overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    需要添加宽度才会显示省略号
+    */
+}
+
+.price-value {
+    font-size: 24rpx !important;
+}
+
+.price-unit {
+    font-size: 26rpx;
+}
+
+
+
+.aa {
+    width: 100%;
+    background-color: rgb(22, 207, 53);
+}

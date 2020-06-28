@@ -1,0 +1,22 @@
+<l-loadMore show type="{{loadType}}" loading-text="正在加载请稍后">
+    <view slot="content">
+        <image class="themeA" mode="widthFix" src="{{themeA.entrance_img}}" />
+        <swiper class="swiper" autoplay indicator-active-color="#08633b" interval="3500" indicator-dots circular>
+            <block wx:for="{{bannerB.items}}" wx:key="index">
+                <swiper-item>
+                    <image class="swiper" src="{{item.img}}" />
+                </swiper-item>
+            </block>
+        </swiper>
+        <s-category-grid grid="{{grid}}"></s-category-grid>
+        <image class="activity" mode="widthFix" src="{{activityD.entrance_img}}" />
+        <s-spu-scroll l-class="sup-scroll" theme="{{themeE}}" spu-list="{{themeESpu}}" wx:if="{{themeE.online}}"></s-spu-scroll>
+        <image src="{{themeF.entrance_img}}" mode="widthFix" class="quality" />
+        <s-hot-list banner="{{bannerG}}"></s-hot-list>
+        <image mode="widthFix" class="fashion" src="{{themeH.entrance_img}}" />
+        <view class="spu-bottom ">
+            <image class="title-spu-bottom" src="../../imgs/home/title@interest.png" />
+            <l-water-flow generic:l-water-flow-item="s-spu-preview"></l-water-flow>
+        </view>
+    </view>
+</l-loadMore>

@@ -1,0 +1,17 @@
+<wxs src="../../wxs/price.wxs" module="p"></wxs>
+<view class="container">
+    <image class="img" mode="widthFix" src="{{data.img}}" />
+    <view class="content">
+        <text class="title">{{data.title}}</text>
+        <view class="tags-container">
+            <block wx:for="{{tags}}" wx:key="idnex">
+                <l-tag type="reading" size="super-mini" l-class="tags">{{item}}</l-tag>
+            </block>
+        </view>
+        <view class="price-row">
+            <l-price autofix color="#157658" value="{{p.mainPrice(data.price,data.discount_price).price}}"></l-price>
+            <l-price autofix l-class="price-left" size="24" color="#ccc" wx:if="{{p.slashedPrice(data.price,data.discount_price).display}}" deleted value="{{p.slashedPrice(data.price,data.discount_price).price}}"></l-price>
+        </view>
+        <text class="subtitle">{{data.subtitle}}</text>
+    </view>
+</view>

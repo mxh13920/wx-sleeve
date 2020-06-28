@@ -1,0 +1,12 @@
+<view class="container">
+    <image src="{{banner.img}}" mode="widthFix" />
+    <view class="inner-container">
+        <view>
+            <image class="left" src="{{left.img}}" mode="widthFix" />
+        </view>
+        <view class="right-container">
+            <image class="right-size" src="{{rightTop.img}}" mode="widthFix" />
+            <image class="right-size" src="{{rightBottom.img}}" mode="widthFix" />
+        </view>
+    </view>
+</view>
