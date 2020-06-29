@@ -1,0 +1,26 @@
+.title {
+    margin: 28rpx 0;
+    font-size: 30rpx;
+    color: #555555;
+}
+
+.row-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.cell {
+    margin: 0 20rpx 30rpx 0;
+}
+
+/* .container { */
+/* padding: 0 20rpx; */
+/* } */
+
+.hr {
+    width: 690rpx;
+    height: 2rpx;
+    background-color: #e8e8e8;
+}

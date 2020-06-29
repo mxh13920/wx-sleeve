@@ -32,6 +32,11 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    onItem(e) {
+      const pid = e.currentTarget.dataset.pid
+      wx.navigateTo({
+        url: `/pages/detail/detail?pid=${pid}`
+      })
+    }
   }
 })
