@@ -4,7 +4,9 @@ Component({
    * 组件的属性列表
    */
   properties: {
-    cell: Object
+    cell: Object,
+    y: Number,
+    x: Number
   },
 
   /**
@@ -18,6 +20,16 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    ontap(e) {
+      // console.log(111);
+      this.triggerEvent('celltap', {
+        cell: this.properties.cell,
+        x: this.properties.x,
+        y: this.properties.y
+      }, {
+        bubbles: true,
+        composed: true
+      })
+    }
   }
 })

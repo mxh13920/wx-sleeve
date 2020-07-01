@@ -15,6 +15,7 @@ class FenceGroup {
         this.skuList = spu.sku_list
     }
 
+
     getDefaultSku() {
         const defaultSkuId = this.spu.default_sku_id
         if (!defaultSkuId) {

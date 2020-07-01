@@ -1,11 +1,10 @@
-// component/fence/index.js
+// component/counter/index.js
 Component({
   /**
    * 组件的属性列表
    */
   properties: {
-    fence: Object,
-    x: Number
+
   },
 
   /**
