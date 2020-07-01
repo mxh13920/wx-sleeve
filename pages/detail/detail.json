@@ -1,5 +1,7 @@
 {
   "usingComponents": {
-    "s-realm": "/component/realm/index"
+    "s-realm": "/component/realm/index",
+    "s-spu-desciprition": "/component/spu-desciprion/index",
+    "s-sale-explain": "/component/sale-explain/index"
   }
 }

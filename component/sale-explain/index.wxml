@@ -1,0 +1,14 @@
+<view class="container">
+    <view class="inner">
+        <text>发货地址：上海</text>
+    </view>
+    <view class="inner">
+        <text>物流：顺丰</text>
+    </view>
+    <view class="inner">
+        <text>发货时间：七个工作日</text>
+    </view>
+    <view class="inner">
+        <text>后货：七天无理由退货</text>
+    </view>
+</view>

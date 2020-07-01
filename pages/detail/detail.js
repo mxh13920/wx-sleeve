@@ -1,6 +1,9 @@
 const {
   Spu
 } = require("../../model/spu")
+const {
+  ShoppingWay
+} = require("../../core/enum")
 
 // pages/detail/detail.js
 Page({
@@ -9,7 +12,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    spu: Object
+    spu: Object,
+    showRe: false
   },
 
   /**
@@ -19,6 +23,35 @@ Page({
     const spu = await Spu.getDetail(options.pid)
     this.setData({
       spu
+    })
+  },
+
+  addCart() {
+    this.setData({
+      showRe: true,
+      orderWay: ShoppingWay.CART
+    })
+  },
+  goToBuy() {
+    this.setData({
+      showRe: true,
+      orderWay: ShoppingWay.BUY
+    })
+  },
+  goToHome() {
+    wx.switchTab({
+      url: '/pages/home/home',
+    })
+  },
+  goToCart() {
+    wx.switchTab({
+      url: '/pages/cart/cart',
+    })
+  },
+
+  onSpecChange(event) {
+    this.setData({
+      specs: event.detail
     })
   },
 

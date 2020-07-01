@@ -10,6 +10,9 @@ const {
 const {
   Cell
 } = require("../models/cell")
+const {
+  Cart
+} = require("../../model/Cart")
 
 // component/realm/index.js
 Component({
@@ -17,13 +20,15 @@ Component({
    * 组件的属性列表
    */
   properties: {
-    spu: Object
+    spu: Object,
+    orderWay: String
   },
 
 
   data: {
     judger: Object,
-    previewImg: String
+    previewImg: String,
+    currentSkuCount: Cart.SKU_MIN_COUNT
   },
 
   observers: {
@@ -39,7 +44,7 @@ Component({
         this.processHasSpec(spu)
 
       }
-
+      this.triggerSpecEvent()
 
 
     }
@@ -52,6 +57,7 @@ Component({
         noSpec: true
       })
       this.bindSkuData(spu.sku_list[0])
+      this.setStockStatus(spu.sku_list[0].stock, this.data.currentSkuCount)
     },
     processHasSpec(spu) {
       const spuList = spu.spuList
@@ -63,6 +69,7 @@ Component({
       const defaultSku = fenceGroup.getDefaultSku()
       if (defaultSku) {
         this.bindSkuData(defaultSku)
+        this.setStockStatus(defaultSku.stock, this.data.currentSkuCount)
       } else {
         this.bindSpuData()
       }
@@ -108,7 +115,40 @@ Component({
       })
 
     },
+    triggerSpecEvent() {
+      const noSpec = Spu.isNoSpec(this.properties.spu)
+      if (noSpec) {
+        this.triggerEvent('specchange', {
+          noSpec
+        })
+      } else {
+        this.triggerEvent('specchange', {
+          noSpec: Spu.isNoSpec(this.properties.spu),
+          skuIntact: this.data.judger.isSkuIntact(),
+          currentValues: this.data.judger.getCurrentValues(),
+          missingKeys: this.data.judger.getMissingKeys()
+        })
+      }
+    },
+    setStockStatus(stock, current) {
+      this.setData({
+        outStock: this.isOutOfStock(stock, current)
+      })
+    },
 
+    isOutOfStock(stock, currentCount) {
+      return stock < currentCount
+    },
+    onSelectCount(e) {
+      const currentCount = e.detail.count
+      this.data.currentSkuCount = currentCount
+      console.log(currentCount);
+      if (this.data.judger.isSkuIntact) {
+        const sku = this.data.judger.getDeterminateSku()
+        this.setStockStatus(sku.stock, currentCount)
+      }
+
+    },
     onCellTap(e) {
       const data = e.detail.cell
 
@@ -125,10 +165,12 @@ Component({
       if (skuIntact) {
         const currentSku = judger.getDeterminateSku()
         this.bindSkuData(currentSku)
+        this.setStockStatus(currentSku.stock, this.data.currentSkuCount)
       }
       this.bindTipData()
 
       this.bindFenceGroupData(judger.fenceGroup)
+      this.triggerSpecEvent()
     }
 
   }
