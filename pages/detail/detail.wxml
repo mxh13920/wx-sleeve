@@ -1,4 +1,4 @@
-<scroll-view scroll-y="{{true}}">
+<scroll-view style="height:{{h}}rpx" scroll-y="{{true}}">
     <swiper class="top" indicator-dots autoplay circular indicator-active-colorr="#282c34">
         <block wx:for="{{spu.spu_img_list}}" wx:key="index">
             <swiper-item>

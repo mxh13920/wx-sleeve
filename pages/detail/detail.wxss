@@ -10,7 +10,6 @@
 /* pages/detail/detail.wxss */
 
 
-
 .sku-pending {
     box-sizing: border-box;
     width: 100%;
@@ -48,10 +47,6 @@
 }
 
 
-.detail-img-container {
-
-    margin-bottom: 150rpx;
-}
 
 .detail-img {
     display: flex;

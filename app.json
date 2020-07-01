@@ -1,6 +1,8 @@
 {
   "pages": [
     "pages/home/home",
+    "pages/search/search",
+    "pages/spu-list/spu-list",
     "pages/detail/detail",
     "pages/category/category",
     "pages/cart/cart",
@@ -24,6 +26,8 @@
     "l-loadMore": "/miniprogram_npm/lin-ui/loadmore/index",
     "l-badge": "/miniprogram_npm/lin-ui/badge/index",
     "l-icon": "/miniprogram_npm/lin-ui/icon/index",
+    "l-segment": "/miniprogram_npm/lin-ui/segment/index",
+    "l-segment-item": "/miniprogram_npm/lin-ui/segment-item/index",
     "l-button": "/miniprogram_npm/lin-ui/button/index",
     "l-popup": "/miniprogram_npm/lin-ui/popup/index",
     "l-counter": "/miniprogram_npm/lin-ui/counter/index",

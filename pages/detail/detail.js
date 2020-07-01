@@ -4,6 +4,9 @@ const {
 const {
   ShoppingWay
 } = require("../../core/enum")
+const {
+  getWindowHeightRpx
+} = require("../../utils/system")
 
 // pages/detail/detail.js
 Page({
@@ -21,8 +24,11 @@ Page({
    */
   onLoad: async function (options) {
     const spu = await Spu.getDetail(options.pid)
+    const windH = await getWindowHeightRpx()
+    const h = windH - 100
     this.setData({
-      spu
+      spu,
+      h
     })
   },
 
