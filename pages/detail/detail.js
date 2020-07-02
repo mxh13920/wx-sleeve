@@ -7,6 +7,12 @@ const {
 const {
   getWindowHeightRpx
 } = require("../../utils/system")
+const {
+  Cart
+} = require("../../model/cart")
+const {
+  CartItem
+} = require("../../model/cart-item")
 
 // pages/detail/detail.js
 Page({
@@ -16,7 +22,8 @@ Page({
    */
   data: {
     spu: Object,
-    showRe: false
+    showRealm: false,
+    cartItemCount: 0
   },
 
   /**
@@ -30,6 +37,7 @@ Page({
       spu,
       h
     })
+    this.updateCartItemCount()
   },
 
   addCart() {
@@ -60,7 +68,31 @@ Page({
       specs: event.detail
     })
   },
+  onShopping(event) {
+    const chosenSku = event.detail.sku
+    const skuCount = event.detail.skuCount
 
+    if (event.detail.orderWay === ShoppingWay.CART) {
+      const cart = new Cart()
+      const cartItem = new CartItem(chosenSku, skuCount)
+      cart.addItem(cartItem)
+      this.updateCartItemCount()
+    }
+
+    if (event.detail.orderWay === ShoppingWay.BUY) {
+      wx.navigateTo({
+        url: `/pages/order/order?sku_id=${chosenSku.id}&count=${skuCount}&way=${ShoppingWay.BUY}`
+      })
+    }
+  },
+
+  updateCartItemCount() {
+    const cart = new Cart()
+    this.setData({
+      cartItemCount: cart.getCartItemCount(),
+      showRealm: false
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

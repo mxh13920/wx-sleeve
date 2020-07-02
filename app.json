@@ -6,7 +6,8 @@
     "pages/detail/detail",
     "pages/category/category",
     "pages/cart/cart",
-    "pages/my/my"
+    "pages/my/my",
+    "pages/order/order"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -22,17 +23,23 @@
     "l-grid-item": "/miniprogram_npm/lin-ui/grid-item/index",
     "l-price": "/miniprogram_npm/lin-ui/price/index",
     "s-spu-preview": "/component/spu-preview/index",
+    "-slide-preview": "/component/spu-preview/index",
+    "s-empty": "/component/empty/index",
     "l-tag": "/miniprogram_npm/lin-ui/tag/index",
     "l-loadMore": "/miniprogram_npm/lin-ui/loadmore/index",
+    "l-search-bar": "/miniprogram_npm/lin-ui/search-bar/index",
     "l-badge": "/miniprogram_npm/lin-ui/badge/index",
+    "l-slide-view": "/miniprogram_npm/lin-ui/slide-view/index",
     "l-icon": "/miniprogram_npm/lin-ui/icon/index",
+    "l-loading": "/miniprogram_npm/lin-ui/loading/index",
     "l-segment": "/miniprogram_npm/lin-ui/segment/index",
     "l-segment-item": "/miniprogram_npm/lin-ui/segment-item/index",
     "l-button": "/miniprogram_npm/lin-ui/button/index",
     "l-popup": "/miniprogram_npm/lin-ui/popup/index",
     "l-counter": "/miniprogram_npm/lin-ui/counter/index",
     "s-counter": "/component/counter/index",
-    "s-tab-bar": "/component/tab-bar/index"
+    "s-tab-bar": "/component/tab-bar/index",
+    "s-checkbox": "/component/checkbox/index"
 
   },
   "tabBar": {

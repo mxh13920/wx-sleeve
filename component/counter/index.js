@@ -1,6 +1,6 @@
 const {
   Cart
-} = require("../../model/Cart")
+} = require("../../model/cart")
 
 Component({
   /**
