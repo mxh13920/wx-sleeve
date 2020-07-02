@@ -75,6 +75,8 @@ Page({
     })
   },
 
+
+
   isAllChecked() {
     const allChecked = cart.isAllChecked()
     console.log(allChecked)
