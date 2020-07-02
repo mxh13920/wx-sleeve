@@ -1,7 +1,10 @@
-class Cart {
+import {
+    Sku
+} from "./sku";
 
+class Cart {
     static SKU_MIN_COUNT = 1
-    static SKU_MAX_COUNT = 99
+    static SKU_MAX_COUNT = 77
     static CART_ITEM_MAX_COUNT = 77
     static STORAGE_KEY = 'cart'
 
@@ -27,8 +30,8 @@ class Cart {
             return null
         }
         const skuIds = this.getSkuIds()
-        const serverData = await Sku.getSkusByIds(skuIds)
-        this._refreshByServerData(serverData)
+        // const serverData = await Sku.getSkusByIds(skuIds)
+        // this._refreshByServerData(serverData)
         this._refreshStorage()
         return this._getCartData()
     }
