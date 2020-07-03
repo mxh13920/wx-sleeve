@@ -1,0 +1,15 @@
+<view class="container l-class">
+    <image mode="aspectFit" src="{{orderItem.sku.img}}" class="left"></image>
+    <view class="middle">
+        <text class="title hidden-text ">{{orderItem.sku.title}}</text>
+        <view class="specs-container">
+            <view class="specs">
+                <text>{{orderItem.sku.title}}</text>
+            </view>
+        </view>
+    </view>
+    <view class="right">
+        <l-price value="{{orderItem.sku.price || orderItem.sku.discount_price}}" color="#333333"></l-price>
+        <text>x {{orderItem.count}}</text>
+    </view>
+</view>

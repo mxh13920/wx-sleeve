@@ -53,7 +53,11 @@ Component({
         },
 
         onDialogConfirm(event) {
-            wx.openSetting()
+            wx.openSetting({
+                success(res) {
+                    res.chooseAddress
+                }
+            })
         },
 
         async getUserAddress() {

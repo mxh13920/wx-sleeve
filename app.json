@@ -36,9 +36,11 @@
     "l-segment-item": "/miniprogram_npm/lin-ui/segment-item/index",
     "l-button": "/miniprogram_npm/lin-ui/button/index",
     "l-popup": "/miniprogram_npm/lin-ui/popup/index",
+    "l-dialog": "/miniprogram_npm/lin-ui/dialog/index",
     "l-counter": "/miniprogram_npm/lin-ui/counter/index",
     "s-counter": "/component/counter/index",
     "s-tab-bar": "/component/tab-bar/index",
+    "s-order-sku-item": "/component/order-sku-item/index",
     "s-address": "/component/address/index",
     "s-checkbox": "/component/checkbox/index"
 

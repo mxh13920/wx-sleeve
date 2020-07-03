@@ -1,4 +1,3 @@
-
 class Address {
     static STORAGE_KEY = 'address'
 
