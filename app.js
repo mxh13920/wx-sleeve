@@ -1,6 +1,9 @@
 const {
   Cart
 } = require("./model/cart")
+// const {
+//   Token
+// } = require("./model/token")
 
 App({
   onLaunch() {
@@ -11,7 +14,7 @@ App({
       })
     }
 
-    // const token = new Token()
-    // token.verify()
+    //   const token = new Token()
+    //   token.verify()
   }
 })

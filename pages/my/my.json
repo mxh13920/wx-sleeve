@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "s-my-banner": "/component/my-banner/index",
+    "s-my-order-panel": "/component/my-order-panel/index"
+  }
 }
