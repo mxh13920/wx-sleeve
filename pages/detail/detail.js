@@ -84,6 +84,9 @@ Page({
         url: `/pages/order/order?sku_id=${chosenSku.id}&count=${skuCount}&way=${ShoppingWay.BUY}`
       })
     }
+    this.setData({
+      showRe: false
+    })
   },
 
   updateCartItemCount() {

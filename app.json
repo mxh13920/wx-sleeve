@@ -39,6 +39,7 @@
     "l-counter": "/miniprogram_npm/lin-ui/counter/index",
     "s-counter": "/component/counter/index",
     "s-tab-bar": "/component/tab-bar/index",
+    "s-address": "/component/address/index",
     "s-checkbox": "/component/checkbox/index"
 
   },
